@@ -16,6 +16,10 @@ const Home = () => {
   return (
     <C.Container>
       {user && <C.Title>{`Olá ${user.nome}`}</C.Title>}
+      {user && (
+        <C.SubTitle>{`Seu e-mail cadastrado é: ${user.email}`}</C.SubTitle>
+      )}
+
       <Button
         Text="Excluir"
         onClick={() => [handleExcluir(), signout(), navigate("/")]}

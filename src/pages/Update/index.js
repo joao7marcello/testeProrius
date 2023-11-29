@@ -24,6 +24,10 @@ const Update = () => {
   }, [user]);
 
   const handleUpdate = () => {
+    if (!nome | !email | !emailConf) {
+      setError("Preencha todos os campos");
+      return;
+    }
     if (!email) {
       setError("Preencha o campo de E-mail");
       return;
